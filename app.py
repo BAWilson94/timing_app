@@ -126,14 +126,7 @@ Flight_time = datetime.datetime(2025,2,9,21,00,00)
 Landing_time = datetime.datetime(2025,2,10,23,00,00)
 Start_work = datetime.datetime(2025,2,16,22,00,00)
 
-#Clear the workspace
-#st.empty()
-#st.empty()
-#st.empty()
-#st.empty()
 
-#_,header,_ = st.columns([1,3,1])
-#with header:
 #    st.title("Ben's Timeline")
 
 st.write("##")
@@ -143,16 +136,6 @@ temp_days, temp_hours, temp_mins, temp_seconds = time_dif(Leave_work)
 with st.container(key="leave_work"):
     left_col1,right_col1 = st.columns([61,39])
     with left_col1:
-        with stylable_container(
-                key="leave_work_left",
-                css_styles="""
-                    {
-                        background-color: white;
-                        color: black;
-                        border-radius: 0px;
-                    }
-                    """,
-        ):
             st.title("Last day at Method:")
     with right_col1:
         with stylable_container(
@@ -185,16 +168,7 @@ with st.container(key="leave_work"):
             
         
             st.title("-"+str_days+':'+str_hours+':'+str_mins+':'+str_seconds)
-            _,c1,_,c2,_,c3,_,c4,_ = st.columns([1,20,5,20,5,20,5,20,5])
-            with c1:
-                st.write('Days')
-            with c2:
-                st.write('Hrs')
-            with c3:
-                st.write('Mins')
-            with c4:
-                st.write('Secs')
-
+            st.html("<p> &emsp; Days &emsp;&ensp; Hrs &emsp;&ensp; Mins &emsp;&ensp; Secs</p>")
 
 
 #st.write("######")
@@ -204,17 +178,7 @@ with st.container(key="flight_time"):
     
     left_col2,right_col2 = st.columns([61,39])
     with left_col2:
-        with stylable_container(
-                key="take_off_left",
-                css_styles="""
-                    {
-                        background-color: white;
-                        color: black;
-                        border-radius: 0px;
-                    }
-                    """,
-        ):
-            st.title("Take-off Heathrow:")
+        st.title("Take-off Heathrow:")
     with right_col2:
         with stylable_container(
                 key="take_off_right",
@@ -246,15 +210,7 @@ with st.container(key="flight_time"):
             
         
             st.title("-"+str_days+':'+str_hours+':'+str_mins+':'+str_seconds)
-            _,c1,_,c2,_,c3,_,c4,_ = st.columns([1,20,5,20,5,20,5,20,5])
-            with c1:
-                st.write('Days')
-            with c2:
-                st.write('Hrs')
-            with c3:
-                st.write('Mins')
-            with c4:
-                st.write('Secs')
+            st.html("<p> &emsp; Days &emsp;&ensp; Hrs &emsp;&ensp; Mins &emsp;&ensp; Secs</p>")
 
 
 
@@ -264,17 +220,7 @@ temp_days, temp_hours, temp_mins, temp_seconds = time_dif(Landing_time)
 with st.container(key="landing_time"):
     left_col1,right_col1 = st.columns([61,39])
     with left_col1:
-        with stylable_container(
-                key="landing_time_left",
-                css_styles="""
-                    {
-                        background-color: white;
-                        color: black;
-                        border-radius: 0px;
-                    }
-                    """,
-        ):
-            st.title("Landing at Sydney:")
+        st.title("Landing at Sydney:")
     with right_col1:
         with stylable_container(
                 key="landing_time_right",
@@ -306,35 +252,16 @@ with st.container(key="landing_time"):
             
         
             st.title("-"+str_days+':'+str_hours+':'+str_mins+':'+str_seconds)
-            _,c1,_,c2,_,c3,_,c4,_ = st.columns([1,20,5,20,5,20,5,20,5])
-            with c1:
-                st.write('Days')
-            with c2:
-                st.write('Hrs')
-            with c3:
-                st.write('Mins')
-            with c4:
-                st.write('Secs')
+            st.html("<p> &emsp; Days &emsp;&ensp; Hrs &emsp;&ensp; Mins &emsp;&ensp; Secs</p>")
                 
 
-#st.write("######")
 with st.container(key="Staring_work"):
     #Construct the flight timer
     temp_days, temp_hours, temp_mins, temp_seconds = time_dif(Start_work)
     
     left_col2,right_col2 = st.columns([61,39])
     with left_col2:
-        with stylable_container(
-                key="start_work_left",
-                css_styles="""
-                    {
-                        background-color: white;
-                        color: black;
-                        border-radius: 0px;
-                    }
-                    """,
-        ):
-            st.title("First day at T&T:")
+        st.title("First day at T&T:")
     with right_col2:
         with stylable_container(
                 key="start_work_right",
@@ -366,15 +293,7 @@ with st.container(key="Staring_work"):
             
         
             st.title("-"+str_days+':'+str_hours+':'+str_mins+':'+str_seconds)
-            _,c1,_,c2,_,c3,_,c4,_ = st.columns([1,20,5,20,5,20,5,20,5])
-            with c1:
-                st.write('Days')
-            with c2:
-                st.write('Hrs')
-            with c3:
-                st.write('Mins')
-            with c4:
-                st.write('Secs')
+            st.html("<p> &emsp; Days &emsp;&ensp; Hrs &emsp;&ensp; Mins &emsp;&ensp; Secs</p>")
 
 #if st.button('stop'):
 #    time.sleep(1000)
